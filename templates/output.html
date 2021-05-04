@@ -1,0 +1,848 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Your-Score</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700">
+    <link rel="stylesheet" href="{% static 'fonts/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/untitled.css' %}">
+
+<body id="page-top">
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark" id="mainNav">
+        <div class="container"><a class="navbar-brand" href="#page-top">Mental Wellbeaing<br></a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right" type="button" data-toogle="collapse" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="nav navbar-nav ml-auto text-uppercase">
+                    <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#services">YOUR SCORE</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#portfolio"><strong>Depression Information &amp; Support</strong><br></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="{%url 'home' %}">HOME</a></li>
+                    <li class="nav-item" role="presentation"></li>
+                    <li class="nav-item" role="presentation"></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="masthead" style="background-image:url('assets/img/header-bg.jpg');">
+        <div class="container"></div>
+    </header>
+    <section id="services">
+        <div class="container">
+            <div class="row text-center justify-content-center">
+                <div class="col col-xl-3">
+                    <div class="card shadow">
+                        <div class="card-header">
+                            <h1 class="h2 text-bold">Your Score</h1>
+                        </div>
+                        <div class="card-body">
+                            <h1>{{out_put}}</h1><br></div>
+                    </div>
+                </div>
+            </div><br><br>
+            <div class="row">
+                <div class="col">
+                
+                    
+                    <p> {{ out_put_content }}
+                    <strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</strong>
+                        <!-- <a
+                            href="tel:18002333330 "><strong><span style="text-decoration: underline;">18002333330-TALK</span></strong></a><strong>&nbsp;&nbsp;to talk&nbsp;</strong><br></p> -->
+                
+                    <p>These results do not mean that you have depression, but it may be time to start a conversation with someone you trust.&nbsp;<strong>If you are interested in learning more, check out the links below.</strong><br></p>
+                    <p>This screen is not meant to be a diagnosis. Diagnosis and care of mental health conditions can be difficult. Having symptoms of depression is different than having depression. In addition, symptoms of depression can be caused by other
+                        mental health conditions, such as bipolar disorder, or other health problems, like a thyroid disorder. A trained professional, such as a doctor or a mental health provider, can make this determination and finding the right support
+                        can help you feel more like you again.<br></p>
+                    <p>The depression symptoms you are experiencing may also indicate a different type of mental health problem related to bipolar disorder. We recommend you also take the screen for bipolar disorder to find out if your symptoms may be more
+                        similar to those experienced by people with bipolar disorder.&nbsp; People who struggle with bipolar disorder experience mood swings from extreme elation, energy, or agitation to low depressive symptoms.<br></p>
+                </div>
+                <div class="col col-xl-4">
+                    <div class="card shadow border-left-info">
+                        <div class="card-header">
+                            <h1 class="h2 text-bold">Score</h1>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="h4">1 -None/Little Depression</h1>
+                            <h1 class="h4">2 -Mild&nbsp;Depression</h1>
+                            <h1 class="h4">3 -Moderate Depression</h1>
+                            <h1 class="h4">4 -Moderately severe&nbsp; &nbsp; &nbsp; Depression</h1>
+                            <h1 class="h4">5 -Severe&nbsp;Depression</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio" class="bg-light">
+        <h1 class="text-center" style="margin-left: 20px;color: #007BA7;"><br><strong>Depression Information &amp; Support</strong><br><br></h1>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card" style="background-color: #EAF2FA;">
+                        <div class="card-body">
+                            <h1 class="h3 text-center" style="color: #007BA7;"><strong>Understanding depression</strong><br></h1><br><a class="card-link btn btn-info" href="#bt11" style="background-color: #007BA47;" data-toggle="modal">What is depression?<br></a><a class="card-link btn btn-info"
+                                href="#bt12" style="background-color: #007BA47;" data-toggle="modal">What causes depression?<br></a><a class="card-link btn btn-info" href="#bt13" style="background-color: #007BA47;" data-toggle="modal">Are there types of depression?<br></a>
+                            <a
+                                class="card-link btn btn-info" href="#bt14" style="background-color: #007BA47;" data-toggle="modal">Am I depressed or just sad?<br></a><a class="card-link btn btn-info" href="#bt15" style="margin-top: 15px;margin-left: 350px;background-color: #007BA47;" data-toggle="modal">Types of intrusive thoughts<br></a></div>
+                    </div>
+                </div>
+            </div><br><br><br>
+            <div class="row">
+                <div class="col">
+                    <div class="card" style="background-color: #EAF2FA;">
+                        <div class="card-body">
+                            <h1 class="h3 text-center" style="color: #007BA7;"><strong>Depression treatment and recovery</strong><br></h1><br><a class="card-link btn btn-info" href="#bt31" style="margin-left: 18px;background-color: #007BA47;" data-toggle="modal">Does depression go away on its own?<br></a>
+                            <a
+                                class="card-link btn btn-info" href="#bt32" style="background-color: #007BA47;" data-toggle="modal">How do you treat depression?<br></a><a class="card-link btn btn-info" href="#bt33" style="background-color: #007BA47;" data-toggle="modal">What meds treat depression?<br></a><a class="card-link btn btn-info" href="#bt34" style="margin-top: 15px;background-color: #007BA47;"
+                                    data-toggle="modal">Nothing is helping my depression<br></a><a class="card-link btn btn-info" href="#bt35" style="margin-top: 15px;background-color: #007BA47;" data-toggle="modal">Will depression come back?<br></a><a class="card-link btn btn-info"
+                                    href="#bt36" style="margin-top: 15px;background-color: #007BA47;" data-toggle="modal">Who can I talk to about my depression?<br></a><a class="card-link btn btn-info" href="#bt37" style="margin-left: 340px;margin-top: 15px;background-color: #007BA47;"
+                                    data-toggle="modal">I’m afraid to tell anyone I feel depressed<br></a></div>
+                    </div>
+                </div>
+            </div><br><br><br>
+            <div class="row">
+                <div class="col">
+                    <div class="card" style="background-color: #EAF2FA;">
+                        <div class="card-body">
+                            <h1 class="h3 text-center" style="color: #007BA7;"><strong>Depression and other mental health concerns</strong></h1><br><a class="card-link btn btn-info" href="#bt41" style="background-color: #007BA47;" data-toggle="modal">What is trauma?<br></a><a class="card-link btn btn-info"
+                                href="#bt42" style="background-color: #007BA47;" data-toggle="modal">What is posttraumatic stress disorder (PTSD)?<br></a><a class="card-link btn btn-info" href="#bt43" style="background-color: #007BA47;" data-toggle="modal">How are depression and bipolar different?<br></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" style="background-image:url('assets/img/map-image.png');">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="text-uppercase section-heading">Contact Us</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form id="contactForm" name="contactForm" novalidate="novalidate">
+                        <div class="form-row">
+                            <div class="col col-md-6">
+                                <div class="form-group"><input class="form-control" type="text" id="name" placeholder="Your Name *" required=""><small class="form-text text-danger flex-grow-1 help-block lead"></small></div>
+                                <div class="form-group"><input class="form-control" type="email" id="email" placeholder="Your Email *" required=""><small class="form-text text-danger help-block lead"></small></div>
+                                <div class="form-group"><input class="form-control" type="tel" placeholder="Your Phone *" required=""><small class="form-text text-danger help-block lead"></small></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group"><textarea class="form-control" id="message" placeholder="Your Message *" required=""></textarea><small class="form-text text-danger help-block lead"></small></div>
+                            </div>
+                            <div class="col">
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div><button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Send Message</button></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="modal fade portfolio-modal text-center" role="dialog" tabindex="-1" id="bt11">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <div class="modal-body">
+                                   <h1>What is depression?</h1>
+    
+                                    <p>Feeling sad is a normal human experience, but feeling too much sadness can cause distress and life problems. When too much sadness affects your life, you might have depression.</p>
+                                   
+                                    <p>Depression is a type of mental illness called a <strong>mood disorder</strong>. Mood disorders occur when changes in mood go beyond the normal ups and downs we all experience from day to day. Episodes of depression last at least two weeks at a time, but sometimes they can last for months or even years.</p>
+                                   
+                                    <p>Depression goes way beyond just feeling sad. Some of the symptoms that people with depression experience include:</p>
+                                    
+                                    <ul>
+                                    <li>Feeling or appearing low, empty inside, or irritable most of the day every day</li>
+                                    <li>Losing interest in activities you would normally enjoy</li>
+                                    <li>Changes in appetite or weight—eating more or less; gaining or losing weight</li>
+                                    <li>Changes in sleep—either not being able to sleep or sleeping too much</li>
+                                    <li>Changes in activity—feeling restless inside or feeling sluggish</li>
+                                    <li>Feeling exhausted even when you seem to be getting enough sleep</li><li>Speaking or moving slowly, fidgeting, or pacing</li>
+                                    <li>Feelings of worthlessness or guilt</li>
+                                    <li>Difficulty thinking, concentrating, or making decisions</li>
+                                    <li>Thoughts of death or suicide</li></ul>
+                                    
+                                    <p>You don’t have to experience all of these to be depressed. Everyone’s experience of depression is slightly different.</p>
+
+                                    <h3>What else could it be?</h3>
+   
+                                <p>Some things can make it seem like you have depression, when really something else is going on. For example:</p>
+    
+                                <ul>
+                                    <li>
+                                        <strong>Using drugs or medications that make you feel low.</strong> If a medication is making you feel depressed, you should talk to your doctor about it. If you are taking drugs or drinking lots of alcohol, they may be causing symptoms of depression—or you may be trying to self-medicate for depression or another mental illness.</li>
+                                    <li>
+                                        <strong>Medical problems like chronic pain or thyroid problems.</strong> Sometimes treating an underlying medical problem can make the depression go away or become less severe.</li>
+                                    <li><strong>Grief.</strong> If you’ve lost a loved one or are upset about a big change in your life, you can feel extremely sad for a while. If it doesn’t get better after a long time (more than two months), it can turn into full-blown depression.</li>
+                                </ul>
+
+                                <h3>Life problems</h3>
+                                
+                                <p>For people who have depression, the symptoms cause serious problems in their lives. The depression may cause them to withdraw from their family, friends, or partners. They may have a hard time in school or work. They might miss assignments, can’t concentrate on their work, or feel overwhelmed by activities. They may not be able to make it to school or work at all.</p>
+
+                                <h3>Stress and anxiety</h3>
+                                
+                                <p>It isn’t uncommon for people with depression to also feel stressed or worried. Some people get worried thinking about their depression—they can feel the depression is coming on, or worry that it won’t go away. Many people with depression also experience another type of mental illness: anxiety. Anxiety involves extreme, ongoing worry and stress.</p>
+
+                                <h3>Depression in bipolar disorder</h3>
+
+                                <p>People with bipolar disorder experience alternating episodes of depression and mania. Mania involves feeling extremely excited and happy for weeks or months at a time. The depression experienced by people with bipolar disorder is similar to “regular” depression.</p>
+                                
+                                <button class="btn btn-info" data-dismiss="modal" type="button"><i class="fa fa-times"></i><span>&nbsp;Close</span>
+                                </button>
+                            
+                            </div>
+                            
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade portfolio-modal text-center" role="dialog" tabindex="-1" id="bt12">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <div class="modal-body">
+                                    <h1>What causes depression?</h1>
+    
+                                    <p>Depression is a mental health problem that comes from changes in your brain. The changes relate to how your brain produces and absorbs neurotransmitters, how it’s circuits work, inflammation, and even how it’s built (grey matter). These biological changes can start because you have a family history of depression, or it can start after changes and stressors in your life.</p>
+                                    
+                                    <p>Some people feel depressed but don’t understand why. Like there’s nothing to be sad about but I feel so sad and I can’t control these feelings. If you feel this way – it’s possible you have a genetic predisposition to depression, that depression might run in your family, or that you have what professionals call “clinical depression.” There’s no environmental explanation for it -but your brain is changing in a way that causes depression symptoms.</p>
+                                    
+                                    <p>Some people feel depressed but don’t understand why. Like there’s nothing to be sad about but I feel so sad and I can’t control these feelings. If you feel this way – it’s possible you have a genetic predisposition to depression, that depression might run in your family, or that you have what professionals call “clinical depression.” There’s no environmental explanation for it -but your brain is changing in a way that causes depression symptoms.</p>
+                                   
+                                    <p>Finally – if life is really hard, trauma and stress can cause depression. You may be bullied all the time, maybe home life is stressful and unhappy, or school sucks and doesn’t get better. Even though it’s expected that you should feel sad, these types of experiences put you at risk of having depression. It’s especially hard if your situation hasn’t changed and you don’t know what life without sadness feels like.</p>
+                                   
+                                    <p>The biological part and the environmental parts all affect one another. It’s a nature and nurture thing.</p>
+                                   
+                                    <p>Even though there are scientific explanations for what depression is. Trust your gut – if you feel like you’re depressed, you know that you feel sad and the feeling is not what you want to feel. You can do something about that and getting better is totally possible.</p>
+
+                                    <button class="btn btn-info" data-dismiss="modal" type="button"><i class="fa fa-times"></i><span>&nbsp;Close 
+                                    </span></button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade portfolio-modal text-center" role="dialog" tabindex="-1" id="bt13">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <div class="modal-body">
+                                    <h1>Are there types of depression?</h1>
+
+                                    <p>
+                                        <span><span><span>We all feel sad sometimes, but depression goes way beyond ordinary sadness. Depression is a mood disorder—a type of mental illness that mainly affects your mood. Everyone experiences depression a little differently, but there are a few specific types of depression. Usually people just refer to all of these as “depression,” but understanding the differences can help you make sense of your own experiences.</span></span></span></p>
+
+                                    <h3><span><span><span><span><span>Major depressive disorder (MDD)</span></span></span></span></span></h3>
+
+                                    <p><span><span><span>People with major depressive disorder (or “major depression”) experience symptoms of depression almost all day, nearly every day. An episode of major depression lasts at least 2 weeks—but it often lasts up to six months, and can sometime last for several years. </span></span></span></p>
+    
+                                    <p><span><span><span>About half of people who experience one episode of major depression will experience at least one more episode later in life. Many of those people will experience multiple episodes of depression throughout their lives, especially if it goes untreated.</span></span></span></p>
+    
+                                    <p><span><span><span><strong>Psychotic depression</strong> isn’t a separate type of depression, but people experiencing a really severe depressive episode can sometimes have psychotic symptoms.</span></span></span></p>
+
+                                    <h3><span><span><span><span><span>Persistent depressive disorder (PDD)</span></span></span></span></span></h3>
+    
+                                    <p><span><span><span>Persistent depressive disorder is less severe than major depression, but it lasts longer. People with persistent depressive disorder experience symptoms of depression most days for at least two years, but don’t experience a major depressive episode during that time. If you have persistent depressive disorder, you may have been depressed for so long that you have a hard time even remembering what it’s like to not be depressed!</span></span></span></p>
+
+                                    <p><span><span><span>Persistent depressive disorder used to be called <strong>dysthymia</strong>, and you can still find a lot of information about it online by searching for “dysthymia.”</span></span></span></p>
+
+                                    <h3><span><span><span><span><span>Post-partum depression</span></span></span></span></span></h3>
+    
+                                    <p><span><span><span>Many people experience depression after giving birth. Post-partum depressionlasts anywhere from two weeks up to a year. It can be really distressing, because people expect to feel happy when they are welcoming a new baby into their lives. But post-partum depression is normal and common. It’s also common to experience depression <em>during</em> pregnancy.</span></span></span></p>
+
+                                    <h3><span><span><span><span><span>Pre-menstrual dysphoric disorder (PMDD)</span></span></span></span></span></h3>
+
+                                    <p><span><span><span>This is an extreme form of pre-menstrual syndrome (PMS). People who experience pre-menstrual dysphoric disorder experience severe symptoms of depression in the week leading up to their period. </span></span></span></p>
+
+                                    <h3><span><span><span><span><span>Seasonal affective disorder (SAD)</span></span></span></span></span></h3>
+
+                                    <p><span><span><span>Many people’s moods are affected by the seasons. When people experience more symptoms of depression during one part of the year, this is called seasonal affective disorder. Most people who have seasonal affective disorder get depressed in the winter, but a few people actually get more depressed in the summer</a>.</span></span></span></p>
+
+                                    <h3><span><span><span><span><span>Depression and bipolar disorder</span></span></span></span></span></h3>
+
+                                    <p><span><span><span>People with bipolar disorder experience alternating episodes of depression and mania.Mania is an extended period of extreme high energy and positive mood.Bipolar disorder is different from being “moody.”</span></span></span></p>
+
+                                    <h3><span><span><span><span><span>References</span></span></span></span></span></h3>
+
+                                    <ul>
+                                        <li><span><span><span><span>American Psychiatric Association. (2013).&nbsp;<em>Diagnostic and statistical manual of mental disorders&nbsp;</em>(5th ed.). Arlington, VA: Author.</span></span></span></span></li>
+                                        <li><span><span><span><span>American Psychiatric Association.&nbsp;<em>What is Depression?</em>&nbsp;Retrieved from&nbsp;<a href="https://www.psychiatry.org/patients-families/depression/what-is-depression">https://www.psychiatry.org/patients-families/depression/what-is-depression</a></span></span></span></span></li>
+                                    </ul>
+                                    <button class="btn btn-info" data-dismiss="modal" type="button"><i class="fa fa-times"></i><span>&nbsp;Close</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade portfolio-modal text-center" role="dialog" tabindex="-1" id="bt14">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <div class="modal-body">
+                                    <h1>Am I depressed or just sad?</h1>
+
+                                    <p><span><span><span>Everyone feels sad sometimes. When you’re sadder than usual, you might say you feel “depressed.” But how do you know when extreme sadness crosses over into <em>clinical</em> depression?</span></span></span></p>
+
+                                    <h3><span><span><span><span><span>What’s the difference between sadness and depression?</span></span></span></span></span></h3>
+
+                                    <p><span><span><span>Depression is about being sad, sure—but it’s more than that. Depression is a mental illnessthat involves a lot of symptoms, like feeling exhausted all the time, losing interest in activities you normally enjoy, or thoughts of death and suicide. Episodes of depression last at least 2 weeks at a time. They can be <strong>triggered</strong> by a sad event or they can seemingly come of out of nowhere.</span></span></span></p>
+
+                                    <h3><span><span><span><span><span>How do I know if I’m sad or depressed?</span></span></span></span></span></h3>
+
+                                    <p><span><span><span>If you’re sad because you lost your job, are going through a breakup, or lost someone in your life… it’s certainly no fun, but it’s also pretty normal. Sadness, even <em>extreme</em> sadness, is a natural reaction to events like these. That said, regular sadness can also <em>turn into</em> depression. If the feelings don’t get better over time, or if your mood starts to get in the way of your daily life, you might be developing a case of depression.</span></span></span></p>
+
+                                    <p><span><span><span>Physical changes can also affect your mood, like hormone changes due to puberty or certain medical treatments or conditions. If you think you might be depressed, it’s a good idea to have a doctor review any medications you’re taking and test your thyroid and other hormone levels.</span></span></span></p>
+
+                                    <p><span><span><span>If you still aren’t sure why you’re feeling down, or if mental illness of any kind runs in your family, there’s a decent chance you’re experiencing depression. If you haven’t already done so, consider taking our depression screen.</span></span></span></p>
+
+                                    <h3><span><span><span><span><span>What now?</span></span></span></span></span></h3>
+
+                                    <p><span><span><span>The good news is, depression is treatable. You can seek professional help from a doctor or a therapist, or there are also lots of things you can do on your own. (Even if you’re just feeling sad and don’t have clinical depression, many of our DIY resources can still help you feel better.) You can also start by learning more about what depression is, what causes it, and how it’s treated.</span></span></span></p><p>&nbsp;</p>
+                                    <button class="btn btn-info" data-dismiss="modal" type="button"><i class="fa fa-times"></i><span>&nbsp;Close </span></button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade portfolio-modal text-center" role="dialog" tabindex="-1" id="bt15">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <div class="modal-body">
+                                    <h1>Types of intrusive thoughts</h1>
+
+                                    <p>You’re going about your day, and suddenly you’re hit with a thought that’s bizarre, uncomfortable—even shocking. Maybe you’re talking to someone, and you suddenly picture yourself punching them in the face. Or you can’t stop picturing random people naked. You don’t want to think about this stuff, so why does it keep happening?</p>
+
+                                    <p>These are called <strong>intrusive thoughts</strong>, and just about everyone has them from time to time. Usually,people are able to ignore the thoughts and move on. But sometimes, intrusive thoughts can get out of hand. If your thoughts are causing you a lot of distress or getting in the way of your daily life, it could be a sign of mental illness. Seeking treatment can help you learn to manage the thoughts.</p>
+    
+                                    <p>Let’s look at a few different types of intrusive thoughts, and what they might mean.</p>
+
+                                    <h3>Thinking about hurting yourself or someone else</h3>
+
+                                    <p>Sometimes intrusive thoughts can be violent. You might think about hurting yourself or someone else. Usually, there’s no intent behind it—you don’t actually <em>want</em> to do those things; it’s just a random thought that pops into your head. But you might be afraid that deep down inside, part of you <em>does</em> want to act out, and that’s why you’re thinking about it so much.</p>
+
+                                    <p>Thoughts like these may be a sign of an anxiety disorder, such as obsessive-compulsive disorder (OCD). People experiencing post-partum depression may also have intrusive thoughts about harming their baby.</p>
+                                    
+                                    <p>If you <em>do</em> have any intent to follow through on these thoughts, or if you’re already acting out, that’s beyond intrusive thoughts. If you’re having trouble controlling aggressive behavior, you’ll need to learn how to manage your emotions in a more constructive way. If you’re thinking of committing suicide, call the National Suicide Prevention Hotline at &nbsp;<strong>1-800-273-TALK</strong>, or text “MHA” to&nbsp;<strong>741-741</strong>&nbsp;to talk to a trained counselor from the Crisis Text Line.</p>
+
+                                    <h3>Intrusive sexual thoughts</h3>
+
+                                    <p>Most people regardless of gender think about sex quite a bit. It’s completely natural. But if you’re ashamed of these thoughts, or you think having them makes you a bad person, you can get fixated on them. Remember that thoughts are just thoughts—even if the thoughts are shocking or frequent, they don’t define who you are as a person.</p>
+    
+                                    <p>It’s also common for people to have intrusive thoughts about their sexual or gender identity. Working out your identity can be a long and difficult process. It can be stressful, and it makes sense that you’d be thinking about it a lot. But it’s also common for people with OCD to obsess over thoughts that don’t seem to line up with their identity. For example, you might identify as lesbian, but have intrusive thoughts about sex with a man.</p>
+
+                                    <h3>Negative self-talk</h3>
+
+                                    <p>Negative thoughts about yourself are a common symptom of depression</a>. When you’re feeling down, it’s easy to get stuck on thoughts like “I’m such a loser,” or “I’ll never amount to anything.” The emotion behind these thoughts can be so strong that they feel like facts, rather than intrusive thoughts.</p>
+
+                                    <h3>Delusional thoughts</h3>
+
+                                    <p>If your thoughts are bizarre or paranoid,you might be experiencing signs of psychosis. For example, you might feel like the FBI is watching everything you do, or that someone is trying to poison you. You might even see or hear things that no one else does. Psychosis can be a sign of a mental illness like schizophrenia or bipolar disorder. Sometimes drugs can also cause psychosis.</p>
+
+                                    <h3>Other intrusive thoughts</h3>
+
+                                    <p>These are just a few of the most common types of intrusive thoughts. There are many more. The important thing is to realize that intrusive thoughts are something that <em>happens to you</em>, not something that <em>defines</em> you. If you think you might be experiencing any of the types of mental illness discussed here,take one of our mental health screens to find out if you’re at risk.</p>
+                                    <button class="btn btn-info" data-dismiss="modal" type="button"><i class="fa fa-times"></i><span>&nbsp;Close</span></button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade portfolio-modal text-center" role="dialog" tabindex="-1" id="bt31">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <div class="modal-body">
+                                        <h1>Does depression go away on its own?</h1>
+
+                                        <p><span><span><span>Depression affects everyone differently. For some people, it comes and goes. For others, it can feel almost constant. You might experience one episode of depression, or it might be a lifelong struggle. </span></span></span></p><p><span><span><span>It’s hard to predict what your experience with depression will be. But the more severely depressed you are, the less likely it will go away on its own—and the more likely it will come back.</span></span></span></p>
+
+                                        <p><span><span><span>Fortunately, there’s no need to sit around and wait for depression to go away on its own. Like other mental illnesses, depression is treatable. You can seek professional help from a doctor or therapist, or you can work on your mental health on your own.</span></span></span></p>
+
+                                        <p><span><span><span>Start by learning more about depression and how it’s treated. Then pick a treatment you feel comfortable with—it can be something simple, like writing in a journal. Stick with it for a few weeks, and see if you feel better. If not, try something else.</span></span></span></p>
+    
+                                        <p><span><span><span>Working actively to improve your mental health feels better than waiting around for things to change on their own. And many of the treatments for depression are just good, healthy habits to have anyway. It may take you a while to find a combination of treatments that works best for you, but that’s okay—finding ways to improve your mental health is a rewarding experience, with benefits that go far beyond just keeping your depression under control. </span></span></span></p>
+                                        <button class="btn btn-info" data-dismiss="modal" type="button"><i class="fa fa-times"></i><span>&nbsp;Close </span></button>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade portfolio-modal text-center" role="dialog" tabindex="-1" id="bt32">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <div class="modal-body">
+                                    <h1>How do you treat depression?</h1>
+
+                                    <p><span><span><span>For most people, some combination of lifestyle changes, therapy, medication, and support are helpful for treating depression. Some of these are more effective than others for certain people. It may take some time to discover what works for you, but it is worth it.</span></span></span></p>
+
+                                    <h3><span><span><span><span><span>Lifestyle changes</span></span></span></span></span></h3>
+
+                                    <p><span><span><span>Many habits can impact your mental health. Making sure you get regular sleep, eat a healthy diet, exercise regularly can help a lot. Some people benefit from reducing or eliminating the use of caffeine, alcohol, or drugs. Meditation, yoga, and spiritual practices can be helpful as well. Pay attention to simple things, like taking time to take care of yourself, trying activities you enjoy, and spending time with people or environments where you feel supported.</span></span></span></p>
+
+                                    <h3><span><span><span><span><span>Therapy</span></span></span></span></span></h3>
+
+                                    <p><span><span><span>Therapy can be a great way to change behaviors, gain confidence, learn new skills, and talk with someone openly and honestly. There are many different types of therapy. Most therapists use multiple techniques, depending on the needs of the person they’re working with. The most common type of therapy for depression is Cognitive Behavioral Therapy (CBT). In CBT, a therapist helps you examine your thoughts and beliefs and how these influence your behavior.</span></span></span></p>
+
+                                    <h3><span><span><span><span><span>Support</span></span></span></span></span></h3>
+
+                                    <p><span><span><span>It’s important to find support from others. This can come through family, friends, professionals, or support groups. Support groups are made up of individuals with similar experiences, who meet regularly to discuss their experiences. Talking to people who are going through the same things can make you feel less alone and more connected. It also creates a space where people can share what has worked for them and talk through their struggles with people who understand.</span></span></span></p>
+
+                                    <h3><span><span><span><span><span>Medication </span></span></span></span></span></h3>
+
+                                    <p><span><span><span>Another option is to take medications. Medications that treat depression are called <strong>antidepressants</strong>, and there are many different kinds. Medications affect everyone differently, so not every medication will work well for you, and many of them will have side-effects. You’ll need to work with your doctor to find a medication that works for you. It’s also common to take multiple medications, to target different symptoms or to counteract side-effects.</span></span></span></p>
+
+                                    <h3><span><span><span><span><span>Device-based treatments</span></span></span></span></span></h3>
+
+                                    <p><span><span><span>When medication treatments don’t work, people can explore the use of device-based treatments for depression. These treatments include&nbsp;Electroconvulsive therapy (ECT), Vagus Nerve Stimulation (VNS),&nbsp;Transcranial Magnetic Stimulation&nbsp;(TmS), or Cranial Electrotherapy Stimulation (CES). Some of these procedures are done in a hospital under the care of a doctor. CES is used at home and is a small device. You’ll have to check with your insurance company if any of these treatments are covered.</span></span></span></p>
+                                    
+                                   <button class="btn btn-info" data-dismiss="modal" type="button"><i class="fa fa-times"></i><span>&nbsp;Close</span></button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade portfolio-modal text-center" role="dialog" tabindex="-1" id="bt33">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <div class="modal-body">
+                                    <h1>What meds treat depression?</h1>
+
+                                    <div>
+                                    <p>Several types of medications can be used to&nbsp;treat depression. Most of these are called <strong>antidepressants</strong>. They work by restoring the balance of the chemicals in your brain.</p>
+
+                                    <h2>How do antidepressants work?</h2>
+
+                                    <p>There are a few different types (or “classes”) of antidepressants. They each work by restoring the balance of the chemicals in your brain, but each medication works on different chemicals and affects them differently.</p>
+
+                                    <p>The brain chemicals we’re talking about are called <strong>neurotransmitters</strong>. They send messages from one brain cell to the next. Different neurotransmitters send different types of messages. The most important ones for understanding antidepressants are:</p>
+
+                                    <ul>
+
+                                        <li><strong>Serotonin</strong>, which affects your mood, energy level, appetite, and sleep </li>
+                                        <li><strong>Dopamine</strong>, which affects motivation and pleasure—sometimes called the “feel good chemical” </li>
+                                        <li><strong>Norepinephrine</strong>, which affects your energy level, focus and attention. Related to adrenaline and has similar effects </li>
+                                    </ul>
+                                        <p>Now we’ll look at the different types of antidepressants, and how each affects these neurotransmitters:</p>
+                                        <h2>Selective Serotonin Reuptake Inhibitors (SSRIs)</h2>
+                                    
+                                    <p>This is the most commonly prescribed type of antidepressant. Chances are, if you go to your family doctor and say you are depressed, they will prescribe you an SSRI. Other types of antidepressants are usually given if SSRIs don’t seem to help.</p>
+
+                                    <p>SSRIs lift your mood by boosting&nbsp;the serotonin levels in your brain. They can be used to treat many mental health conditions, including depression, anxiety, obsessive-compulsive disorder (OCD), and post-traumatic stress disorder (PTSD).</p>
+
+                                    <p>Examples of SSRIs include:</p>
+                                    <div class="table-wrapper" style="overflow-x: auto;">
+                                        <table class="table table-bordered table-striped"><tbody><tr><td><strong>Generic name</strong></td><td><strong>Brand name(s)</strong></td></tr><tr><td>Citalopram</td><td>Celexa</td></tr><tr><td>Escitalopram</td><td>Lexapro</td></tr><tr><td>Fluoxetine</td><td>Prozac, Sarafem, Symbyax</td></tr><tr><td>Fluvoxamine</td><td>Luvox</td></tr><tr><td>Paroxetine</td><td>Paxil, Pexeva</td></tr><tr><td>Sertraline</td><td>Zoloft</td></tr><tr><td>Vilazodone</td><td>Viibryd</td></tr></tbody></table></div><p>For more information, <a href="https://screening.mhanational.org/content/selective-serotonin-reuptake-inhibitors-ssris/" data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="a53353a6-1def-4c4c-97f2-d38a650579d8">check out our full article on SSRIs</a>.</p><h2>Serotonin and Norepinephrine Reuptake Inhibitors (SNRIs)</h2><p>SNRIs are similar to SSRIs, except that in addition to serotonin, they also boost norepinephrine. In addition to depression and anxiety, SNRIs can also treat chronic pain [5] and ADHD [6].</p><div class="table-wrapper" style="overflow-x: auto;"><table class="table table-bordered table-striped"><tbody><tr><td><strong>Generic name</strong></td><td><strong>Brand name(s)</strong></td></tr><tr><td>Desvenlafaxine</td><td>Pristiq</td></tr><tr><td>Duloxetine</td><td>Cymbalta</td></tr><tr><td>Levomilnacipran</td><td>Fetzima</td></tr><tr><td>Milnacipran</td><td>Savella</td></tr><tr><td>Venlafaxine</td><td>Effexor</td></tr></tbody></table></div><p>For more information, <a href="https://screening.mhanational.org/content/serotonin-and-norepinephrine-reuptake-inhibitors-snris/" data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="26c73cb4-4894-45d3-8366-e4d592e0ba4a">check out our full article on SNRIs</a>.</p><h2>Tricyclic Antidepressants (TCAs)</h2><p>TCAs are an older class of antidepressants. They are now less common than SSRIs and SNRIs, but they are still used if other types of antidepressants don’t seem to be working. They can also be an option for ADHD [7].</p><div class="table-wrapper" style="overflow-x: auto;"><table class="table table-bordered table-striped"><tbody><tr><td><strong>Generic name</strong></td><td><strong>Brand name(s)</strong></td></tr><tr><td>Amitriptyline</td><td>Elavil</td></tr><tr><td>Amoxapine</td><td>Asendin</td></tr><tr><td>Clomipramine</td><td>Anfranil</td></tr><tr><td>Desipramine</td><td>Norpramin</td></tr><tr><td>Doxepin</td><td>Sinequan</td></tr><tr><td>Imipramine</td><td>Tofranil</td></tr><tr><td>Nortriptyline</td><td>Pamelor</td></tr><tr><td>Protriptyline</td><td>Vivactil</td></tr></tbody></table></div><p>For more information, <a href="https://screening.mhanational.org/content/tricyclic-antidepressants-tcas/" data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="b2ae8e72-d816-41ae-a306-efe79d07377c">check out our full article on TCAs</a>.</p><h2>Monoamine Oxidase Inhibitors (MAOIs)</h2><p>MAOIs are the oldest type of antidepressants on this list. MAOIs can interact with food, so being on them often involves dietary restrictions. They also interact with a lot of other medications. For these reasons, they’re no longer used very commonly [8].</p><p>Still, MAOIs can be helpful if other types of antidepressants haven’t worked. They are sometimes used to treat bipolar disorder, or to treat neurological conditions such as Parkinson’s disease.</p>
+
+                                    <p>They can also be helpful with <strong>atypical depression</strong>, or “depression with atypical features.”</p>
+                                    
+                                    <div class="table-wrapper" style="overflow-x: auto;"><table class="table table-bordered table-striped"><tbody><tr><td><strong>Generic name</strong></td><td><strong>Brand name(s)</strong></td></tr><tr><td>Isocarboxazid</td><td>Marplan</td></tr><tr><td>Phenelzine</td><td>Nardil</td></tr><tr><td>Selegiline</td><td>EMSAM (taken as a skin patch)</td></tr><tr><td>Tranylcypromine</td><td>Parnate</td></tr></tbody></table></div>
+                                    <p>For more information, <a href="https://screening.mhanational.org/content/monoamine-oxidase-inhibitors-maois/" data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="cd1b3939-4234-4729-abdf-289114cff2f7">check out our full article on MAOIs</a>.</p>
+
+                                    <h2>Atypical antidepressants</h2>
+
+                                    <p>There are several medications that don’t fit into any of the above categories. They are commonly used to target specific symptoms, to avoid side effects, or when other antidepressants don’t seem to be working. Most of them are less likely to cause sexual side effects than other types of antidepressants.</p>
+
+                                    <ul><li><strong>Bupropion (brand names: Wellbutrin, Zyban)</strong> boosts dopamine and norepinephrine. Unlike most antidepressants, it has no effect on serotonin. It is often prescribed to target specific symptoms, like oversleeping, weight gain, fatigue, and trouble concentrating [9][10], or to counteract the side effects of other antidepressants.</li><li><strong>Trazodone</strong> is an antidepressant, but it’s also commonly prescribed for people who have trouble sleeping or who experience nightmares due to PTSD [11].</li><li><strong>Mirtazapine (brand name: Remeron)</strong> is also prescribed as a sleep aid. It can cause an increase in appetite and weight gain, which can be a negative side effect—or a plus, for people who are underweight or have an eating disorder [12].</li><li><strong>Vortioxetine (brand names: Trintellix, Brintellix) </strong>is similar to other antidepressants that work by boosting serotonin levels in the brain .</li><li>Ketamine&nbsp;and esketamine&nbsp;are medications that have mainly been used for anesthesia and pain management. In recent years, these have begun to be used to treat severe or treatment-resistant depression (TRD).</li></ul>
+
+                                    <p>For more information, <a href="https://screening.mhanational.org/content/atypical-antidepressants/" data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="5a6d37fa-be11-4296-9c95-725a236663b1">check out our full article on atypical antidepressants</a>.</p>
+                                    
+                                    <h2>Other treatments for depression</h2>
+
+                                    <p>In addition to antidepressants, there are other types of medications that can sometimes help with depression. Many of these are designed to treat other conditions, such as anxiety or bipolar disorder. Atypical antipsychotics are a common example . Many people who have been diagnosed with depression also have symptoms of other mental and physical health conditions. Treating these other conditions can help with depression as well.</p><p>Medication is also not the only treatment for depression. Therapy is helpful for many people. Life style changes can also help: getting more sleep, eating foods that help you feel energized and healthy, doing enjoyable activities, and getting more exercise are good places to start.</p>
+
+                                    <hr><h2>How do I take an antidepressant?</h2>
+
+                                    <p>Antidepressants are taken daily. They often take several weeks before they have a noticeable effect. You can’t just take an antidepressant every once in a while, on days where you feel especially depressed.</p>
+
+                                    <p>You might be tempted to stop taking them as soon as you feel better, thinking that you’ve been cured. Unfortunately, antidepressants are not a cure for depressionthey are a way of managing it, not a way of making it go away permanently. Some people are able to eventually stop taking antidepressants, but there’s no shame in taking them for long periods of time or even for your whole life!</p>
+                                    
+                                    <p>If you do decide to stop taking an antidepressant, it’s best to talk to your doctor first. Your doctor can help you reduce the dosage gradually, which will reduce withdrawal symptoms. (You can often do this by cutting your tablets in half for a few weeks, then into fourths for a few more weeks.) They may also help you find an alternative that has fewer side effects or is more effective.</p>
+                                    
+                                    <h2>Side effects</h2>
+                                    <p>All mental health medications have the potential for side effects [15]. Each medication is different—for information about the side effects of a specific type of antidepressant, read the articles on SSRIs, SNRIs, TCAs,MAOIs, and/or atypical antidepressants</a>.</p>
+
+                                    <p>Common side effects of antidepressants include:</p>
+
+                                    <ul><li>Changes in your sleep, appetite, weight, or sex drive</li><li>Feeling nauseous or dizzy</li><li>Headaches</li></ul><p>In rare cases, antidepressants can actually make you feel more depressed, or have suicidal thoughts. If&nbsp; this happens, talk to your doctor right away. If you are having uncontrollable suicidal thoughts or a plan, reach out to someone you trust that can help you, call 1-800-273-TALK (<a href="tel:18002738255">1-800-273-8255</a>), or&nbsp;<a href="sms:741741&amp;body=MHA">text “MHA” to&nbsp;741741</a>&nbsp;to talk with someone anonymously who can help you through these thoughts.</p><p>Most antidepressants have the potential to cause <strong>serotonin syndrome</strong>, which is rare but serious. Serotonin syndrome happens when the serotonin levels in your brain get <em>too</em> high. It usually happens when you are taking more than one medication or supplement that boosts serotonin. Symptoms include:</p><ul><li>Feeling confused and agitated</li><li>Twitching muscles</li><li>Sweating or shivering</li><li>Diarrhea</li></ul><p>In the most severe cases, it can include:</p><ul><li>Seizures</li><li>Irregular heartbeat</li><li>Loss of consciousness</li></ul><p>Serotonin syndrome is a medical emergency. If you experience it, seek emergency medical care or call 911.</p><h2>References:</h2><ol style="font-size: small;"><li>Frazer &amp; Hensler. (1999). Serotonin Involvement in Physiological Function and Behavior. In Siegel et al. (Eds.), <em>Basic Neurochemistry: Molecular, Cellular and Medical Aspects </em>(6<sup>th</sup> ed.). Retrieved from <a href="https://www.ncbi.nlm.nih.gov/books/NBK27940/">https://www.ncbi.nlm.nih.gov/books/NBK27940/</a></li><li>Belujon &amp; Grace. (2017). Dopamine System Dysregulation in Major Depressive Disorders. <em>International Journal of Neuropsychopharmacology 20</em>(12), pp. 1036-1046. Retrieved from <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5716179/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5716179/</a></li><li>Moret &amp; Briley. (2011). The importance of norepinephrine in depression. <i>Neuropsychiatric Disease and Treatment 7</i>(Suppl 1), pp. 9-13. Retrieved from <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3131098/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3131098/</a></li><li>National Health Services (NHS). (2015). “Overview: Selective Serotonin Reuptake Inhibitors (SSRIs).”&nbsp;<em>NHS</em>. Retrieved from&nbsp;<a href="https://www.nhs.uk/conditions/ssri-antidepressants/">https://www.nhs.uk/conditions/ssri-antidepressants/</a></li><li>Stahl et al. (2005). SNRIs: The Pharmacology, Clinical Efficacy, and Tolerability in Comparison with Other Classes of Antidepressants. <em>CNS Spectrums,</em>&nbsp;<em>10</em>(9), pp. 732-747.&nbsp;Retrieved from <a href="https://doi.org/10.1017/S1092852900019726">https://doi.org/10.1017/S1092852900019726</a></li><li>Antshel et al. (2011). Advances in understanding and treating ADHD. <em>BMC Medicine 9</em>, p. 72. Retrieved from <a href="https://doi.org/10.1186/1741-7015-9-72">https://doi.org/10.1186/1741-7015-9-72</a></li><li>Budur et al. (2005). Non-Stimulant Treatment for Attention Deficit Hyperactivity Disorder.&nbsp;<em>Psychiatry (Edgmont),&nbsp;2</em>(7), 44–48. Retrieved from <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3000197/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3000197/</a></li><li>Fiedorowicz &amp; Swartz. (2004). The Role of Monoamine Oxidase Inhibitors in Current Psychiatric Practice. <em>Journal of Psychiatric Practice 10</em>(4), pp. 239-248. Retrieved from <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2075358/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2075358/</a></li><li>Patel et al. (2016). Bupropion: a systematic review and meta-analysis of effectiveness as an antidepressant. <em>Therapeutic Advances in Psychopharmacology 6</em>(2), pp. 99–144. Retrieved from <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4837968/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4837968/</a></li><li>Acheson &amp; de Wit. (2008). Bupropion improves attention but does not affect impulsive behavior in healthy young adults. <em>Experimental and Clinical Psychopharmacology, 16</em>(2), 113–123. Retrieved from <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4270475/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4270475/</a></li><li>Shin and Saadabadi. (2020). <em>Trazodone.</em> StatPearls Publishing, Treasure Island, Florida. Retrieved from <a href="https://www.ncbi.nlm.nih.gov/books/NBK470560/">https://www.ncbi.nlm.nih.gov/books/NBK470560/</a></li><li>Croom, et al. (2009). Mirtazapine: A Review of its Use in Major Depression and Other Psychiatric Disorders. <em>CNS Drugs 23</em>, pp. 427-452. Retrieved from <u><a href="https://doi.org/10.2165/00023210-200923050-00006">https://doi.org/10.2165/00023210-200923050-00006</a></u></li><li>D’Agostino, et al. (2015). <em>Vortioxetine (Brintellix): A New Serotonergic Antidepressant. Pharmacy and Therapeutics, 40</em>(1), pp. 36-40. Retrieved from <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4296590/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4296590/</a></li><li><u>Nemeroff. (2004). </u><u>Use of atypical antipsychotics in refractory depression and anxiety.</u> <u><em>The Journal of Clinical Psychiatry</em></u><u> </u><u><em>66</em></u><u> Suppl 8</u><u>, pp. </u><u>13-21</u><u>. Retrieved from </u><a href="https://europepmc.org/article/med/16336032">https://europepmc.org/article/med/16336032</a> <a href="https://europepmc.org/article/med/16336032">https://europepmc.org/article/med/16336032</a></li><li>National Health Services (NHS). (2015). “Side effects: Antidepressants.”&nbsp;<em>NHS</em>. Retrieved from <a href="https://www.nhs.uk/conditions/antidepressants/side-effects/">https://www.nhs.uk/conditions/antidepressants/side-effects/</a></li></ol></div>
+                                    <button class="btn btn-info" data-dismiss="modal" type="button"><i class="fa fa-times"></i><span>&nbsp;Close</span></button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade portfolio-modal text-center" role="dialog" tabindex="-1" id="bt34">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <div class="modal-body">
+                                    <h1>Nothing is helping my depression</h1>
+
+                                    <div>
+                                    <p>Even when you do everything you’re “supposed” to do, symptoms of depression can stick around. Part of the experience of depression is that it feels like it will go on forever, and when you are doing the work and not seeing any changes, it can feel hopeless and not worth the effort.</p>
+
+                                    <p>Many things that help with depression take some time to work. Medications can often take 4-6 weeks for people to notice a difference. Therapy is a process. Lifestyle changes like healthy eating, exercise, or meditation do not change your life immediately. As wonderful as it would be, there is no immediate fix. If you are doing things to work towards your recovery, it’s important to give things time to work. The small, repeated actions can eventually lead to major changes in how you are feeling.</p>
+
+                                    <p>There are options if you are trying and not seeing any progress:</p>
+
+                                    <ul>
+                                        <li>If you are taking medication, you may want to talk to your doctor about trying different medications. While this can take more time, it is ultimately worth it to find a medicine or combination of medicines that work for you.</li>
+                                        <li>Identify other factors that might be contributing to depression. For some, physical health problems might be at the root of a mental health problem.&nbsp; For example, new research links depression to inflammatory diseases  issues.&nbsp; If you haven’t already looked into other physical health concerns, it’s worth checking out.</li>
+                                        <li>If you are working with a therapist, it’s important to speak openly about whether you find it helpful. Your sessions might be more useful if you let the person know your concerns or frustrations. Just like all relationships, sometimes things are not the right fit and you may need to explore other options. Many people try more than one therapist before they find someone they want to work with.</li>
+                                        <li>Finding a support group can help you feel less alone in the process and give you the opportunity to connect with others who can offer their experience and hope with you. There are many local support groups for depression and other mental health and health related issues.</li>
+                                        <li>For some, depression continues despite trying many of these options over a long period of time. An additional option to explore with professionals is neurostimulation, which includes things like Vagus Nerve Stimulation, Transcranial Magnetic Stimulation, and Electroconvulsive Therapy. These all use electric or magnetic impulses to engage the nervous system, and are typically reserved for when many other treatments have not worked.</li>
+                                    </ul>
+
+                                    <p>Wherever you are in this process, know that most people do recover and that research into new antidepressant medications are giving individuals even more options to eliminate or reduce depression symptoms. With the right combination of supports, people live full lives even with depression.</p>
+                                    <div>&nbsp;<p></p>
+                                        <hr size="1"><div id="edn1">
+                                            <p> Raison, C. L., &amp; Miller, A. H. (2011). Is depression an inflammatory disorder?. Current psychiatry reports, 13(6), 467-475.</p>
+                                    </div>
+                                    <div id="edn2">
+                                        <p> Foster, J. A., &amp; Neufeld, K. A. M. (2013). Gut–brain axis: how the microbiome influences anxiety and depression. Trends in neurosciences, 36(5), 305-312.</p>
+                                    </div>
+
+                                    <div id="edn3"><p>Murrough, J. W., Iosifescu, D. V., Chang, L. C., Al Jurdi, R. K., Green, C. E., Perez, A. M., … &amp; Charney, D. S. (2013). Antidepressant efficacy of ketamine in treatment-resistant major depression: a two-site randomized controlled trial. American Journal of Psychiatry, 170(10), 1134-1142.</p></div></div>
+
+                                    </div>
+                                    <button class="btn btn-info" data-dismiss="modal" type="button"><i class="fa fa-times"></i><span>&nbsp;Close</span></button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade portfolio-modal text-center" role="dialog" tabindex="-1" id="bt35">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <div class="modal-body">
+                                    
+                                    <h1>Will depression come back?</h1>
+
+                                    <div><p>Some people have depression once in their life and it goes away and doesn’t come back. One studyfound that 45% of people had depression once in their life, while 55% experienced depression multiple times. For people who experience depression multiple times (called recurring depression), symptoms might get better at times and get worse at others, but it doesn’t ever feel like depression is gone.</p><p>Your brain is a muscle – so just like other muscles, getting better takes time, isn’t a light switch, and how bad things were gives you information about how much effort and time it might take to recovery.</p>
+
+                                    <p><strong>Here are some factors that can impact whether depression will come back (if you might have a recurring episode).</strong></p><p>1) If your first episode was really bad, it can be a sign of a chronic illness. How severe your symptoms are determines how much the depression has impacted your brains health and your quality of life. The more severe the depression is, the harder it is for your brain to recover. Severe depression isn’t just feeling really sad for a while. Severe depression looks like feeling so sad you can’t get out of bed, sleep is totally off, you miss school or work, and depression has gotten in the way of relationships.</p>
+
+                                    <p>2) If depression runs in your family, you might a genetic predisposition to clinical depression. If clinical depression runs in your family, it is an indicator that you may need medical intervention to feel relief. It’s helpful to know what treatments did or didn’t work for family members.</p>
+
+                                    <p>3) If you respond well to treatment and things got better the first time you got depression, it’s a good sign that your brain can continue to respond positively to treatments. The only thing that matters is finding out what works for you and keep doing that thing.</p><p>4) What else is going on in your life. Depression is hard to fight if you’re constantly battling things that increase stress, make you feel alone, attacked, or if you don’t have support or security. If you’re dealing with relationship problems or financial problems, focusing on making those things better can help also tackle the depression.</p>
+
+    </div><button class="btn btn-info" data-dismiss="modal" type="button"><i class="fa fa-times"></i><span>&nbsp;Close</span></button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade portfolio-modal text-center" role="dialog" tabindex="-1" id="bt36">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <div class="modal-body">
+                                    <h1>Who can I talk to about my depression?</h1>
+
+                                    <div>
+
+                                    <p>When you’re depressed, it’s easy to feel alone. It might feel like no one understands what you’re going through. You might not even fully understand it yourself! Reaching out can be scary, but there’s no need to suffer through depression on your own.</p>
+                                    <p>Right now, hundreds of millions of people all over the world also live with depression or have experienced it in the past. It might surprise you how many of those are people you already know. Many more are willing to listen or want to understand.</p>
+
+                                    <p>There will be some people who just won’t get it, but it’s not your job to convince them—just keep trying to find a support system that works for you. The suggestions below are just that: suggestions. Start with whichever option is most comfortable for you right now. You can always open up to more people later on.</p>
+
+                                    <h2>Friends and family</h2>
+                                    <p>If you already have supportive friends and family, opening up to them can be a great place to start. It can be a huge relief to open up to the people closest to you, since you no longer have to hide what you’re feeling. You can also open up to coaches, teachers, or religious leaders—anyone in your personal life that you’re close to.</p>
+
+                                    <h2>Professionals</h2>
+
+                                    <p>Professionals you can open up to about your mental health include doctors, therapists, or peer supporters. If you already see a doctor, that can be a great place to start—and they can help you find a therapist or any other specialists you may need to see. If you’re in school, a school counselor can help you with this.</p>
+                                    
+                                    <h2>Support groups</h2>
+                                    
+                                    <p>Support groups are made up of people who have experienced similar things. They can meet in person or online. They talk about their daily lives, struggles, and strategies they’ve used to cope and thrive. It can be nice to feel like you belong in a community, and to hear about other people experiencing the same things you have.</p>
+
+                                    <h2>Anonymous help lines</h2>
+
+                                    <p>>Hotlines, warmlines, online support, or text lines can help, too. These are typically run by trained volunteers or employees whose job it is to listen to those who reach out. Talking to a stranger can help you feel safer about what you’re sharing, and strangers may be able to offer more objective feedback than the people involved in our lives.</p>
+                                    <h2>What do I say?</h2>
+                                    <p>If you’re not sure what to say, try writing your thoughts down first. This can help you get your words straight so you know how to express yourself. You can even write a letter to the person, if you find that easier than talking to them. Try using a help line or a support group as “practice” for opening up to friends, family, or professionals that you might feel more nervous about talking to.</p>
+
+                                    </div>
+
+                                    <button class="btn btn-info" data-dismiss="modal" type="button"><i class="fa fa-times"></i><span>&nbsp;Close
+                                    </span></button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade portfolio-modal text-center" role="dialog" tabindex="-1" id="bt37">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <div class="modal-body">
+                                    <h1>I’m afraid to tell anyone I feel depressed</h1>
+
+                                    <div><p>Depression is hard and confusing. Having to then keep that a secret from other people can be exhausting and alienating. When you are dealing with something so difficult, the instinct to want to share can be halted by the shame you might feel or the fear about how other people might react. Especially if we don’t understand why we feel this way, the potential for someone to reject us or to tell us the same awful things we tell ourselves seems overwhelming.</p>
+
+                                    <p>It’s scary to share anything, let alone something that feels so personal. But you’d be surprised to find out how many people you know have also dealt with or are dealing with depression. If they haven’t themselves, most people have family members or friends who have. While not everyone will understand, many people do.</p><p>No matter what path you choose, it’s important to reach out to others to get help. Depression often convinces you that other people won’t want to hear your struggle or won’t be able to help. The experience of many people shows otherwise. Whether it’s a friend, family member, teacher, coach, therapist, support group, textline, hotline, or stranger on the internet – getting it out and acknowledging how we’re feeling to someone else can be a massive first step.</p>
+
+                                    <p>Whoever you decide to talk to can help you discuss what you’re experiencing. Especially when the other person has experienced it too, it can feel like you are finally not all alone anymore. They may even help brainstorm about what you can do next. Researching some of this yourself can help you feel more prepared if you are worried about what to say, too. Learning about and finding language to describe your experience can be reassuring.</p>
+
+                                    <p>Remember, you don’t have to tell everyone in your life, but it’s really important to tell someone. You do not have to deal with this alone.</p>
+
+                                    </div>
+
+                                    <button class="btn btn-info" data-dismiss="modal" type="button"><i class="fa fa-times"></i><span>&nbsp;Close </span></button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade portfolio-modal text-center" role="dialog" tabindex="-1" id="bt41">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <div class="modal-body">
+                                    <h1>What is trauma?</h1>
+
+                                    <div><p><span><span><span>If you have seen or experienced something that really shocked or scared you, you may be dealing with <strong>trauma</strong>. Anything that is highly stressful to you can be traumatic.&nbsp;Trauma is different for everyone what seems normal to someone else might be traumatic for you. </span></span></span></p>
+
+                                    <p><span><span><span>A traumatic experience can be a threat to your physical safety, like a car accident. It could be something more emotional or social. Trauma can be a one time event, like a violent attack. Or&nbsp;it can be ongoing, like childhood neglect. Things like abuse, natural disasters, sudden death, bullying, poverty, and discrimination can all induce a trauma response.</span></span></span></p>
+                                    <h2><span><span><span><span><span>What’s it like to go through trauma?</span></span></span></span></span></h2>
+                                    <p><span><span><span>Most people feel anxious and afraid during and after a traumatic event. Some develop long-term symptoms that impact their day-to-day functioning.</span></span></span></p>
+                                    <p><span><span><span>Trauma can occur at any age. But it has a particularly long-lasting impact on children, because their brains are still developing rapidly.</span></span></span></p>
+                                    <p><span><span><span>We all respond to situations and feelings differently, so not everyone who shares an experience with you will have the same reaction. There is no “right” or “wrong” way to think, feel, or act after experiencing a traumatic event. But you may find yourself experiencing some of these symptoms:&nbsp;</span></span></span></p>
+                                    <p><span><span><span><strong>Common Emotional Symptoms</strong></span></span></span></p>
+                                    <ul>
+                                        <li><span><span><span>Fear, anxiety </span></span></span></li>
+                                    <li><span><span><span>Shock, disbelief</span></span></span></li>
+                                    <li><span><span><span>Confusion, difficulty focusing</span></span></span></li>
+                                    <li><span><span><span>Anger</span></span></span></li>
+                                    <li><span><span><span>Guilt, shame</span></span></span></li>
+                                    <li><span><span><span>Sadness, hopelessness</span></span></span></li>
+                                    <li><span><span><span>Feeling disconnected or numb</span></span></span></li>
+                                    <li><span><span><span>Feeling like everything is out of your control</span></span></span></li>
+                                </ul>
+                                    <p><span><span><span><strong>Common Physical Symptoms</strong></span></span></span></p>
+                                    <ul>
+                                        <li><span><span><span>Trouble sleeping, nightmares</span></span></span></li><li><span><span><span>Fatigue, exhaustion</span></span></span></li>
+                                    <li><span><span><span>Dizziness, shakiness</span></span></span></li>
+                                    <li><span><span><span>Racing heart, fast breathing</span></span></span></li>
+                                    <li><span><span><span>Feeling on edge</span></span></span></li>
+                                    <li><span><span><span>Body aches/pains, muscle tension</span></span></span></li>
+                                    <li><span><span><span>Increased substance use</span></span></span></li>
+                                </ul>
+                                    <h2><span><span><span>How long do the effects of trauma last?</span></span></span></h2>
+
+                                    <p><span><span><span>Trauma symptoms typically last from a few days to a few months. Trauma is tough on the mind. You may not feel like your normal self for a while. In many cases, symptoms will gradually fade as time passes and as you process what happened. Once you’re feeling better, it’s common for painful memories or emotions to resurface occasionally—especially in response to event anniversaries, or other things that remind you of the trauma.&nbsp;Things that bring back memories or symptoms of trauma are called <strong>triggers</strong>.</span></span></span></p>
+
+                                    <p><span><span><span>If your symptoms don’t let up or if they get worse, you may be dealing with post-traumatic stress disorder (PTSD). Even though the danger has passed, your brain gets “stuck” in that fear and has a hard time moving forward. People with PTSD may experience severe anxiety, flashbacks, and constant memories of the event.</span></span></span></p>
+                                    <p><span><span><span>Trauma can also lead to other mental health conditions, like depression and anxiety. This is especially common for people who dealt with trauma as a child. Children often don’t have the coping skills they need to process the trauma. This can lead to the painful effects of trauma resurfacing later in life. People who have experienced trauma may also misuse drugs and alcohol as a way to self-medicate.&nbsp;</span></span></span></p>
+                                    <h2><span><span><span><span><span>Will I ever feel better?</span></span></span></span></span></h2>
+                                    <p><span><span><span>Be patient with yourself! Trauma is hard to deal with—but that doesn’t mean that you’ll never be okay again. There are a lot of ways for people with trauma to cope with their symptoms and improve their quality of life</a>. Many people who have experienced trauma live fulfilling lives with the help of their support system, therapy, lifestyle changes, and/or medication.</span></span></span></p>
+                                    <p><span><span><span>If you think you may be experiencing a mental health condition like depression, anxiety, or PTSD, take one of our online mental health tests</a>. </span></span></span></p>
+                                    <h2><span><span><span><span><span>References</span></span></span></span></span></h2>
+                                    <ul>
+                                        <li><span><span><span>American Psychological Association. <em>Trauma</em>. Retrieved October 2020 from <a href="https://www.apa.org/topics/trauma">https://www.apa.org/topics/trauma</a></span></span></span></li>
+                                        <li><span><span><span>Loenard. (2020). What is trauma? What to know. <em>Medical News Today</em>. Retrieved from <a href="https://www.medicalnewstoday.com/articles/trauma">https://www.medicalnewstoday.com/articles/trauma</a></span></span></span></li>
+                                         <li><span><span><span>Trauma-Informed Care Implementation Resource Center. What is trauma? Retrieved from <a href="https://www.traumainformedcare.chcs.org/what-is-trauma/">https://www.traumainformedcare.chcs.org/what-is-trauma/</a>&nbsp;</span></span></span></li>
+                                         <li><span><span><span>Nowak. (2018). Can Childhood Trauma Cause Anxiety? <em>Bridges to Recovery.</em> Retrieved from <a href="https://www.bridgestorecovery.com/blog/can-childhood-trauma-cause-anxiety-whats-the-best-way-to-approach-treatment/">https://www.bridgestorecovery.com/blog/can-childhood-trauma-cause-anxiety-whats-the-best-way-to-approach-treatment/</a>&nbsp;</span></span></span></li>
+                                </ul>
+
+                                    </div>
+                                    <button class="btn btn-info" data-dismiss="modal" type="button"><i class="fa fa-times"></i><span>&nbsp;Close </span></button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade portfolio-modal text-center" role="dialog" tabindex="-1" id="bt42">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <div class="modal-body">
+                                  <h1>What is posttraumatic stress disorder (PTSD)?</h1>
+
+                                    <div>
+
+                                    <p>If you have gone through a traumatic experience it’s normal to feel lots of emotions about it. These can include distress, fear, helplessness, guilt, shame or anger.&nbsp;You may start to feel better later, but sometimes these feelings don’t go away.</p><p><strong>Posttraumatic stress disorder (PTSD)</strong> is a common mental health condition that appears after&nbsp;experiencing or witnessing a traumatic event. Examples of events might include natural disasters, violent attacks, car accidents, or childhood abuse or neglect. The same event can affect people differently—what’s traumatic for you might not be traumatic for someone else.</p><p>PTSD usually develops after a single, brief traumatic event. Some forms of trauma occur over long periods of time and can lead to a related condition, Complex PTSD.</p>
+                                    
+                                    <h2>Symptoms of PTSD</h2>
+
+                                    <p>The telltale signs of PTSD are:</p>
+                                    <ul>
+                                        <li><strong>Repeatedly thinking about the trauma</strong>. You may find that thoughts about the trauma come to mind even when you don’t want them to. You might also have nightmares or flashbacks about the event.</li><li><strong>Being constantly alert or on guard</strong>. You may be easily startled or angered, irritable or anxious and preoccupied with staying safe. You might become hyper-aware of your surroundings and see danger everywhere.</li>
+                                        <li><strong>Avoiding reminders of the trauma</strong>.&nbsp;You may not want to talk about the event or be around people or places that remind you of the event. You may even forget&nbsp;details about the event or suppress your memories.</li>
+                                        <li><strong>Intense negative emotions and beliefs. </strong>You may feel depressed, anxious, guilty, or angry. You might blame yourself for the trauma, or believe that no one can be trusted.</li>
+                                    </ul>
+                                    <p>Other symptoms may include:</p>
+                                    <ul>
+                                        <li><strong>Feeling emotionally numb</strong></li>
+
+                                        <li><strong>Trouble concentrating or sleeping</strong></li>
+                                        <li><strong>Losing interest in activities</strong> you normally enjoy</li>
+                                        <li><strong>Relationship problems</strong>: having problems with intimacy, or feeling detached from your family and friends</li>
+                                        <li><strong>Physical symptoms</strong>:&nbsp;chronic pain, headaches, stomach pain, diarrhea, tightness or burning in the chest, muscle cramps or lower back pain</li>
+                                        <li><strong>Panic attacks:</strong> a sudden feeling of intense fear (which may seem totally unrelated to the event), with shortness of breath, dizziness, sweating, nausea and racing heart</li>
+                                        <li><strong>Substance use problems</strong>: using drugs or alcohol to cope with, or forget, the emotional pain</li>
+                                        <li><strong>Relationship problems</strong>: having problems with intimacy, or feeling de
+                                        tached from your family and friends</li>
+                                        <li><strong>Other mental health conditions</strong>, such as anxiety, depression, or suicidal thoughts</li>
+                                    </ul>
+                                    <p>Most people who experience a traumatic event have symptoms like these for a few days after the event. But people with PTSD experience them for <strong>over a month</strong>, and they interfere with the person’s life.</p>
+                                    <hr><p>PTSD can happen to anyone, at any age. About 1 in 11 people will experience PTSD at some time in their life. About 3.5% of American adults experience it every year. We often think of PTSD as something that affects male war veterans, but women experience PTSD twice as often as men.</p>
+                                    <p>PTSD often appears alongside other mental health conditions, such as depression or anxiety.&nbsp;PTSD can be treated successfully, and many people recover from it.</p>
+                                    <p>If you think you may be experiencing PTSD, take our free PTSD test. Then, keep exploring this site to learn more.</p>
+                                    <h2>References</h2>
+                                    <ul>
+                                        <li>American Psychiatric Association. (2013).&nbsp;<em>Diagnostic and statistical manual of mental disorders&nbsp;</em>(5th ed.). Arlington, VA: Author.</li>
+                                        <li>American Psychiatric Association.&nbsp;<em>What Is Posttraumatic Stress Disorder</em><em>?</em>&nbsp;Retrieved from&nbsp;<a href="https://www.psychiatry.org/patients-families/ptsd/what-is-ptsd">https://www.psychiatry.org/patients-families/ptsd/what-is-ptsd</a></li>
+                                    </ul>
+
+                                    </div>
+                                    <button class="btn btn-info" data-dismiss="modal" type="button"><i class="fa fa-times"></i><span>&nbsp;Close </span></button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade portfolio-modal text-center" role="dialog" tabindex="-1" id="bt43">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <div class="modal-body">
+                                    <h1> How are depression and bipolar different?</h1>
+                                    <p class="item-intro text-muted">People with depression feel overwhelmingly sad, while people with bipolar disorder feel extreme mood changes from sad to elevated or high energy (using “clinical” terms, this means they experience depression and mania).</p>
+                                    <p>People with depression feel overwhelmingly sad, while people with bipolar disorder feel extreme mood changes from sad to elevated or high energy (using “clinical” terms, this means they experience depression and mania).</p>
+                                    <p>Both terms describe mental health problems that people can experience.</p>
+                                    <p>Finding a correct diagnosis takes time and requires asking lots of questions, taking a good history, and ruling out other things that can look like mental illnesses that aren’t mental illnesses.</p>
+                                    <p>It is easier to diagnose depression and harder to diagnose bipolar disorder. People who have bipolar disorder can experience long periods of depression and then when they experience elevated mood – it’s hard to tell if the change in mood is the depression improving or something else.</p>
+                                    <p>Experiencing positive moods and recovery from depression is different from mania in one important way.  Generally, when someone experiences mania, the elevated mood, increased energy, or hyperactivity also causes problems for the person.  Some of the risky behaviors that go along with mania include shopping sprees, increase in risky pleasurable activities like unsafe sex or gambling, periods of no sleep, and sometimes changes in bizarre behaviors and thinking.</p>
+                                    <p>If a person experiences at least one episode of mania in their life, it is an indication that they might have bipolar disorder.</p>
+                                    <p>If you think you have bipolar disorder, we recommend you talk to a mental health professional and ask for a full evaluation. A mental health provider should be able to explain their diagnostic impression and give you education about what to keep an eye on going forward.</p>
+
+                                    <button class="btn btn-info" data-dismiss="modal" type="button"><i class="fa fa-times"></i><span>&nbsp;Close </span></button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade portfolio-modal text-center" role="dialog" tabindex="-1" id="portfolioModal-9">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <div class="modal-body">
+                                    <h2 class="text-uppercase">Project Name</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p><img class="img-fluid d-block mx-auto" src="assets/img/portfolio/6-full.jpg">
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae
+                                        cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <ul class="list-unstyled">
+                                        <li>Date: January 2017</li>
+                                        <li>Client: Threads</li>
+                                        <li>Category: Illustration</li>
+                                    </ul><button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fa fa-times"></i><span>&nbsp;Close Project</span></button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="{% static 'js/agency.js' %}"></script>
+</body>
+
+</html>

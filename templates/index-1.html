@@ -1,0 +1,569 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Mental Wellbeaing</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700">
+    <link rel="stylesheet" href="{% static 'fonts/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/untitled.css' %}">
+</head>
+
+<body id="page-top">
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark" id="mainNav">
+        <div class="container"><a class="navbar-brand" href="#page-top">Mental Wellbeaing</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right" type="button" data-toogle="collapse" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="nav navbar-nav ml-auto text-uppercase">
+                    <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="{%url 'home' %}">Home</a></li>
+                    <li class="nav-item" role="presentation"></li>
+                    <li class="nav-item" role="presentation"></li>
+                    <li class="nav-item" role="presentation"></li>
+                    <li class="nav-item" role="presentation"></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="masthead" style="background-image:url('{% static 'assets/img/q.jpg' %}');">
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in"><span><br>All questions were compulsory to answer<br><br></span></div>
+                <div class="intro-heading text-uppercase"><span><br>Well-being survey<br><br></span></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in"></div>
+                <div class="intro-heading text-uppercase"></div>
+            </div>
+        </div>
+    </header>
+    <section id="questions" class="btn-xl">
+        <form>
+            {% csrf_token %}
+            <div class="container text-center">
+                <div class="form-row">
+                    <div class="col">
+                        <h3>Basic Information<br></h3>
+                        <h2><br></h2>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        
+                        <p>1. What is your gender?<br></p>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-check text-left"><input class="form-check-input" type="radio" id="Male" name="Q1" value=1><label class="form-check-label" for="gender-1">Male</label></div>
+                        <div class="form-check text-left"><input class="form-check-input" type="radio" id="Female" name="Q1" value=0><label class="form-check-label text-left" for="gender-1">Female</label></div>
+                        <div class="form-check text-left"><input class="form-check-input" type="radio" id="Other" name="Q1" value=2><label class="form-check-label" for="gender-1">Other</label></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <p></p>
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col">
+                        <p>2. What is your current level of education?<br></p>
+                    </div>
+                    <div class="col-lg-4 text-left">
+                        <div class="form-check"><input class="form-check-input" type="radio"  id="Class_10-12" name="Q2" value=0><label class="form-check-label" for="education">Class 10-12<br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio"  id="Under_graduate" name="Q2" value=2><label class="form-check-label" for="education">Under graduate<br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio"  id="Postgraduate" name="Q2"  value=1><label class="form-check-label" for="education">Postgraduate<br></label></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <p></p>
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col-lg-8">
+                        <p>3. With whom did you spend your lockdown days?<br></p>
+                    </div>
+                    <div class="col-lg-3 text-left">
+                        <div class="form-check"><input class="form-check-input" type="radio" id="At home with family" name="Q3" value=1><label class="form-check-label" for="lockdown">At home with family<br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="At hostel/flat with friends" name="Q3" value=2><label class="form-check-label" for="lockdown">At hostel/flat with friends<br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="Alone" name="Q3" value=0><label class="form-check-label" for="lockdown">Alone</label></div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="container text-center">
+                <div class="form-row">
+                    <div class="col">
+                        <h2><br></h2>
+                        <h3>Personal Experiences<br></h3>
+                        <h2><br></h2>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <p>4. Do you think the pandemic and the subsequent lockdown has altered your outlook on life? If yes, whether negatively or positively?<br></p>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-check text-left"><input class="form-check-input" type="radio" id="Yes, i'm more optimistic now" name="Q4" value=1><label class="form-check-label" for="outlook">Yes, i'm more optimistic now<br></label></div>
+                        <div class="form-check text-left"><input class="form-check-input" type="radio" id="Yes, i'm more pessimistic now" name="Q4" value=2><label class="form-check-label text-left" for="outlook">Yes, i'm more pessimistic now<br></label></div>
+                        <div class="form-check text-left"><input class="form-check-input" type="radio" id="No effect" name="Q4" value=0><label class="form-check-label" for="outlook">No effect<br></label></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <p></p>
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col">
+                        <p>5. Has the lockdown had an impact on your physical health?<br></p>
+                    </div>
+                    <div class="col-lg-4 text-left">
+                        <div class="form-check"><input type="radio" id="Yes" name="Q5" value=2>
+                            <label for="Yes">Yes</label><br>
+                            <input type="radio" id="No" name="Q5" value=1>
+                            <label for="No">No</label><br>
+                            <input type="radio" id="Maybe" name="Q5" value=0>
+                            <label for="Maybe">Maybe</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <p></p>
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col-lg-8">
+                        <p>6. Rate your lockdown experiences on a scale of 1-5 based on the following feelings.<br></p>
+                    </div>
+                    <div class="col text-left"><span>Frustrating</span>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="1" name="Q6" value=0><label class="form-check-label" for="Q6">1</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="2" name="Q6" value=1><label class="form-check-label" for="Q6">2</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="3" name="Q6" value=2><label class="form-check-label" for="Q6">3</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="4" name="Q6" value=3><label class="form-check-label" for="Q6">4</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="5" name="Q6" value=4><label class="form-check-label" for="Q6">5</label></div><span>Relieving</span></div>
+                </div>
+            </div>
+            <div class="container text-center">
+                <div class="form-row">
+                    <div class="col">
+                        <h2><br></h2>
+                        <h3>Productivity<br></h3>
+                        <h2><br></h2>
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col">
+                        <p>7.How often did you do something productive?<br></p>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-check text-left"><input class="form-check-input" type="radio" id="Quite Often" name="Q7" value=2><label class="form-check-label" for="Q7">Quite Often <br></label></div>
+                        <div class="form-check text-left"><input class="form-check-input" type="radio" id="Often" name="Q7" value=1><label class="form-check-label text-left" for="Q7">Often <br></label></div>
+                        <div class="form-check text-left"><input class="form-check-input" type="radio" id="Sometimes" name="Q7" value=4><label class="form-check-label" for="Q7">Sometimes<br></label></div>
+                        <div class="form-check text-left"><input class="form-check-input" type="radio" id="Rarely" name="Q7" value=3><label class="form-check-label" for="Q7">Rarely<br></label></div>
+                        <div class="form-check text-left"><input class="form-check-input" type="radio" id="Never" name="Q7" value=0><label class="form-check-label" for="Q7">Never<br></label></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <p></p>
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col">
+                        <p>8.Did you do anything for academic improvement?eg: Took up online courses or practiced a skill etc<br></p>
+                    </div>
+                    <div class="col-lg-4 text-left">
+                        <div class="form-check"><input class="form-check-input" type="radio" id="Yes" name="Q8" value=2><label class="form-check-label" for="formCheck-1">Yes<br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="No" name="Q8" value=1><label class="form-check-label" for="formCheck-1">No<br></label></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <p></p>
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col-lg-8">
+                        <p>9. How did you Q9 most of your time during the lockdown<br></p>
+                    </div>
+                    <div class="col-lg-3 text-left">
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="Studying /being academically inclined" name="Q9a" value=1 ><label class="form-check-label" for="Q9">Studying /being academically inclined<br></label></div>
+                                <div class="form-check"><input class="form-check-input" type="checkbox" id="Gaming" name="Q9e" value=1 ><label class="form-check-label" for="Q9">Gaming<br></label></div>
+                                <div class="form-check"><input class="form-check-input" type="checkbox" id="Household chores" name="Q9b" value=1 ><label class="form-check-label" for="Q9">Household chores<br></label></div>
+                                <div class="form-check"><input class="form-check-input" type="checkbox" id="Netflix or Other OTT" name="Q9c" value=1 ><label class="form-check-label" for="Q9">Netflix or Other OTT<br></label></div>
+                                <div class="form-check"><input class="form-check-input" type="checkbox" id="Sleeping" name="Q9d" value=1><label class="form-check-label" for="Q9">Sleeping<br></label></div><br>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <p></p>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="form-row">
+                        <div class="col-lg-8">
+                            <p>10.Did you do anything for fun and recreation?<br></p>
+                        </div>
+                        <div class="col-lg-3 text-left">
+                            <div class="form-check"><input class="form-check-input" type="radio" id="Yes, I pursued my hobbies" name="Q10" value=2><label class="form-check-label" for="appetite">Yes, I pursued my hobbies<br></label></div>
+                            <div class="form-check"><input class="form-check-input" type="radio" id="No" name="Q10" value=0 ><label class="form-check-label" for="appetite">No<br></label></div><br>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="form-row">
+                            <div class="col-lg-9">
+                                <p>11.The average number of hours you spent on social media, in a day<br></p>
+                            </div><br>
+                            <div class="col-lg-3 text-left">
+                                <div class="form-check"><input class="form-check-input" type="radio" id="Less than 1 hour" name="Q11" value=3><label class="form-check-label" for="Q11">Less than 1 hour<br></label></div>
+                                <div class="form-check"><input class="form-check-input" type="radio" id="1-2 hours" name="Q11" value=0 ><label class="form-check-label" for="Q11">1-2 hours<br></label></div>
+                                <div class="form-check"><input class="form-check-input" type="radio" id="3-4 hours" name="Q11" value=1><label class="form-check-label" for="Q11">3-4 hours<br></label></div>
+                                <div class="form-check"><input class="form-check-input" type="radio" id="Almost 6 hours" name="Q11" value=2 ><label class="form-check-label" for="Q11">Almost 6 hours<br></label></div>
+                                <div class="form-check"><input class="form-check-input" type="radio" id="More than 6 hours" name="Q11" value=4><label class="form-check-label" for="Q11">More than 6 hours<br></label></div>
+                            </div>
+                        </div>
+                  
+                </div>
+                </div>
+                
+            <div class="container text-center">
+                <div class="form-row">
+                    <div class="col">
+                        <h2><br></h2>
+                        <h3>Physical Health<br></h3>
+                        <h2><br></h2>
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col">
+                        <p>12.How have your eating habits changed?<br></p>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-check text-left"><input class="form-check-input" type="radio" id="I under eat" name="Q12" value=2><label class="form-check-label" for="Q12">I under eat<br></label></div>
+                        <div class="form-check text-left"><input class="form-check-input" type="radio" id="I overeat" name="Q12" value=1><label class="form-check-label text-left" for="Q12">I overeat <br></label></div>
+                        <div class="form-check text-left"><input class="form-check-input" type="radio" id="I eat in regulation" name="Q12" value=0><label class="form-check-label" for="Q12">I eat in regulation<br></label></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <p></p>
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col">
+                        <p>13.How has your body weight changed through the lockdown?<br></p>
+                    </div>
+                    <div class="col-lg-4 text-left">
+                        <div class="form-check"><input class="form-check-input" type="radio" id="gained Q13" name="Q13" value=0><label class="form-check-label" for="Q13">I've gained weight<br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="lost weight" name="Q13" value=1><label class="form-check-label" for="weight">I've lost weight <br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="Unchanged" name="Q13" value=2><label class="form-check-label" for="weight">Unchanged<br></label></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <p></p>
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col-lg-8">
+                        <p>14.Did you experience a loss of appetite?<br></p>
+                    </div>
+                    <div class="col-lg-3 text-left">
+                        <div class="form-check"><input class="form-check-input" type="radio" id="Significantly" name="Q14" value=2><label class="form-check-label" for="Q13">Significantly<br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="Somewhat" name="Q14" value=3><label class="form-check-label" for="Q13">Somewhat<br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="Not much " name="Q14" value=1><label class="form-check-label" for="Q13">Not much <br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="Not at all" name="Q14" value=0><label class="form-check-label" for="Q13">Not at all<br></label></div>
+                    </div>
+                    
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <p></p>
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col-lg-8">
+                        <p>15.How often did you exercise?<br></p>
+                    </div>
+                    <div class="col-lg-3 text-left">
+                        <div class="form-check"><input class="form-check-input" type="radio" id="Regularly" name="Q15" value=1><label class="form-check-label" for="Q15">Regularly<br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="Somedays" name="Q15" value=2><label class="form-check-label" for="Q15">Somedays<br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="Never" name="Q15" value=0><label class="form-check-label" for="Q15">Never<br></label></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <p></p>
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col">
+                        <p>16.What made up most of your diet?<br></p>
+                    </div>
+                    <div class="col-lg-4 text-left">
+                        <div class="form-check"><input class="form-check-input" type="radio"id="Regular home cooked food" name="Q16" value=2><label class="form-check-label" for="formCheck-1">Regular home cooked food<br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="Fried/ junk food " name="Q16" value=1><label class="form-check-label" for="formCheck-1">Fried/ junk food <br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="Binge ate crisps and snacks" name="Q16" value=0><label class="form-check-label" for="formCheck-1">Binge ate crisps and snacks<br></label></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <p></p>
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col-lg-8">
+                        <p>17.To what do you most attribute your eating behavior?<br></p>
+                    </div>
+                    <div class="col-lg-3 text-left">
+                        <div class="form-check"><input class="form-check-input" type="radio" id="Boredom" name="Q17" value=0><label class="form-check-label" for="formCheck-1">Boredom<br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="Hunger" name="Q17" value=2><label class="form-check-label" for="formCheck-1">Hunger<br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="Emotional distress" name="Q17" value=1><label class="form-check-label" for="formCheck-1">Emotional distress<br></label></div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="col">
+                <p></p>
+            </div>
+            <div class="container text-center">
+                <div class="form-row">
+                    <div class="col">
+                        <h2><br></h2>
+                        <h3>Emotional Mental Health<br></h3>
+                        <h2><br></h2>
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col">
+                        <p>18.Choose the word that best describes your lockdown experience.<br></p>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-check text-left"><input class="form-check-input" type="radio" id="Pleasant" name="Q18" value=3><label class="form-check-label" for="formCheck-1">Pleasant<br></label></div>
+                        <div class="form-check text-left"><input class="form-check-input" type="radio" id="Humbling" name="Q18" value=1><label class="form-check-label text-left" for="formCheck-1">Humbling<br></label></div>
+                        <div class="form-check text-left"><input class="form-check-input" type="radio" d="Chaotic" name="Q18" value=0><label class="form-check-label" for="formCheck-1">Chaotic<br></label></div>
+                        <div class="form-check text-left"><input class="form-check-input" type="radio" id="Numb" name="Q18" value=2><label class="form-check-label" for="formCheck-1">Numb<br></label></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <p></p>
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col">
+                        <p>19.How did you feel in regards to your studies or career?<br></p>
+                    </div>
+                    <div class="col-lg-4 text-left">
+                        <div class="form-check"><input class="form-check-input" type="radio" id="Motivated " name="Q19" value=4><label class="form-check-label" for="formCheck-1">Motivated <br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="Excited " name="Q19" value=3><label class="form-check-label" for="formCheck-1">Excited <br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="Didn't think about i" name="Q19" value=1><label class="form-check-label" for="formCheck-1">Didn't think about it<br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="Anxious" name="Q19" value=0><label class="form-check-label" for="formCheck-1">Anxious<br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="Directionless" name="Q19" value=2><label class="form-check-label" for="formCheck-1">Directionless<br></label></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <p></p>
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col">
+                        <p>20.How do/ did you feel most of the time?<br></p>
+                    </div>
+                    <div class="col-lg-4 text-left">
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="Happy" name="Q20c" value=1 > <label class="form-check-label" for="formCheck-1">Happy<br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="Satisfied" name="Q20b" value=1><label class="form-check-label" for="formCheck-1">Satisfied<br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="Agitated/ Irritable" name="Q20e" value=1><label class="form-check-label" for="formCheck-1">Agitated/Irritable<br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="Moody" name="Q20a" value=1><label class="form-check-label" for="formCheck-1">Moody<br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="Sad" name="Q20d" value=1><label class="form-check-label" for="formCheck-1">Sad<br></label></div>
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <p>21.Did you experience a tragic loss of something important?<br></p>
+                    </div>
+                    <div class="col-lg-4 text-left">
+                        <div class="form-check"><input class="form-check-input" type="radio" id="Yes" name="Q21" value=1><label class="form-check-label" for="formCheck-1">Yes<br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="No" name="Q21" value=0><label class="form-check-label" for="formCheck-1">No<br></label></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <p></p>
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col">
+                        <p>22.How often did you indulge in the things you liked to do before?<br></p>
+                    </div>
+                    <div class="col-lg-4 text-left">
+                        <div class="form-check"><input class="form-check-input" type="radio" id="Often" name="Q22" value=1><label class="form-check-label" for="formCheck-1">Often<br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="Sometimes" name="Q22" value=3><label class="form-check-label" for="formCheck-1">Sometimes<br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="Rearly" name="Q22" value=2><label class="form-check-label" for="formCheck-1">Rearly<br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="Never" name="Q22" value=0 label class="form-check-label" for="formCheck-1">Never<br></label></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <p></p>
+                    </div>
+                </div>
+                <!-- <div class="form-row">
+                    <div class="col">
+                        <p>22.How often did you indulge in the things you liked to do before?<br></p>
+                    </div>
+                    <div class="col-lg-4 text-left">
+                        <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Often<br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Sometimes<br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Rearly<br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Never<br></label></div>
+                    </div>
+                </div> -->
+                <div class="form-row">
+                    <div class="col">
+                        <p></p>
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col">
+                        <p>23.How would you describe your sleep cycle?<br></p>
+                    </div>
+                    <div class="col-lg-4 text-left">
+                        <div class="form-check"><input class="form-check-input" type="radio" id="Normal" name="Q23" value=2><label class="form-check-label" for="formCheck-1">Normal<br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="Disturbed" name="Q23" value=0><label class="form-check-label" for="formCheck-1">Disturbed<br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="Lack of Q23" name="Q23" value=1><label class="form-check-label" for="formCheck-1">Lack of sleep<br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="Oversleeping" name="Q23" value=3><label class="form-check-label" for="formCheck-1">Oversleeping<br></label></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <p></p>
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col">
+                        <p>24.Describe your relationship with your family and friends.<br></p>
+                    </div>
+                    <div class="col-lg-4 text-left">
+                        <div class="form-check"><input class="form-check-input" type="radio" id="Fun and expressive" name="Q24" value=2><label class="form-check-label" for="formCheck-1">Fun and expressive<br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="Comforting and warm" name="Q24" value=0><label class="form-check-label" for="formCheck-1">Comforting and warm <br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="Formal and unyielding" name="Q24" value=1><label class="form-check-label" for="formCheck-1">Formal and unyielding <br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="Toxic and Argumentative" name="Q24" value=3><label class="form-check-label" for="formCheck-1">Toxic and Argumentative<br></label></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <p></p>
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col">
+                        <p>25.Have ever suffered from a mental illness? if yes, what course of action was taken? if not,choose 'NA' .<br>NOTE: This question is not to be answered based on mere short term speculations but on persisting symptomatic<br>grounds
+                            only. Choose 'NA' if you've never identified with a mental illness.<br><br></p>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <p>Recieved appropriate therapy/ medication - <br></p>
+                    </div>
+                    <div class="col-lg-4 text-left">
+                        <div class="form-check"><input class="form-check-input" type="radio" id="Yes" name="Q25a" value=2><label class="form-check-label" for="formCheck-1">No<br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="No" name="Q25a" value=1><label class="form-check-label" for="formCheck-1">Yes<br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="NA" name="Q25a" value=0><label class="form-check-label" for="formCheck-1">NA<br></label></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <p></p>
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col">
+                        <p>Talked about it with someone close<br></p>
+                    </div>
+                    <div class="col-lg-4 text-left">
+                        <div class="form-check"><input class="form-check-input" type="radio" id="Yes" name="Q25b" value=2><label class="form-check-label" for="formCheck-1">Yes<br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="No" name="Q25b" value=1><label class="form-check-label" for="formCheck-1">No<br></label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="NA" name="Q25b" value=0><label class="form-check-label" for="formCheck-1">NA<br></label></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <p></p>
+                    </div>
+                </div>
+                <br>
+                <!-- <div class="form-row">
+                    <div class="col">
+                        <p>26.Editor's note: We hope you liked our questionnaire; Let us know how much.<br></p>
+                    </div>
+                    <div class="col-lg-4 text-left"><span>Dull</span>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="1" name=questionnaire value="1"><label class="form-check-label" for="formCheck-2">1</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="2" name=questionnaire value="2"><label class="form-check-label" for="formCheck-2">2</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="3" name=questionnaire value="3"><label class="form-check-label" for="formCheck-2">3</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="4" name=questionnaire value="4"><label class="form-check-label" for="formCheck-2">4</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" id="5" name=questionnaire value="5"><label class="form-check-label" for="formCheck-2">5</label></div><span>Excellent</span></div>
+                </div> -->
+                <div class="form-row">
+                    <div class="col">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <!-- href="{% url 'result' %}" -->
+                        
+                        <button class="btn-xl rounded-pill btn-outline-danger " type="submit">Submit
+                        </button></div>
+
+                       
+                        
+                </div>
+            </div>
+        </form>
+     
+    </section>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="{% static 'js/agency.js' %}"></script>
+   
+</body>
+
+</html>
